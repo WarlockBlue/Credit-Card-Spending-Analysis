@@ -77,6 +77,6 @@ SpendingAveragePerMonth = CreditCardSpending[["Year","Month","Debit"]].groupby([
 #%% Seaborn Visualization
 sns.set_style("whitegrid")
 g = sns.catplot(x="Month", y="Debit", col="Year", data=CreditCardSpending, kind="bar", order=months , estimator=np.max, ci=None)
-g.set_titles(col_template = "Maximum Spending in {col_name}", y=1.03)
+g.set_titles(col_template = "Maximum Spending in {col_name}", y = 1.03)
 g.set(yticks=np.arange(0,5500,500))
 g.set_xticklabels(rotation = 45)
