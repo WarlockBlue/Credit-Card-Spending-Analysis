@@ -11,7 +11,7 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 import calendar
 
-FINANCEDATA = pd.read_csv("C:/Users/Andres/Desktop/Data Science Projects/Finances/Transactions.csv")
+FINANCEDATA = pd.read_csv("/home/andres/sf_Data_Science_Projects/Transactions.csv")
 
 
 FINANCEDATA = FINANCEDATA.drop("Check Number", axis = 1)
@@ -64,7 +64,7 @@ MAX.set(yticks=np.arange(0,5500,500))
 
 MAX.set_xticklabels(rotation = 45)
 
-MAX.savefig('C:/Users/Andres/Desktop/Data Science Projects/Finances/MaximumCreditCardSpending.png')
+# MAX.savefig('C:/Users/Andres/Desktop/Data Science Projects/Finances/MaximumCreditCardSpending.png')
 
 
 
@@ -77,7 +77,7 @@ MEAN.set(yticks=np.arange(0,275,25))
 
 MEAN.set_xticklabels(rotation = 45)
 
-MEAN.savefig('C:/Users/Andres/Desktop/Data Science Projects/Finances/AverageCreditCardSpending.png')
+# MEAN.savefig('C:/Users/Andres/Desktop/Data Science Projects/Finances/AverageCreditCardSpending.png')
 
 
 TOTAL = sns.catplot(x="Month", y="Debit", col="Year", col_wrap=3, data=CreditCard, \
@@ -89,4 +89,4 @@ TOTAL.set(yticks=np.arange(0,6500,500))
 
 TOTAL.set_xticklabels(rotation = 45)
 
-TOTAL.savefig('C:/Users/Andres/Desktop/Data Science Projects/Finances/TotalCreditCardSpending.png')
+# TOTAL.savefig('C:/Users/Andres/Desktop/Data Science Projects/Finances/TotalCreditCardSpending.png')
